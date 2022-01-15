@@ -1,0 +1,21 @@
+header{
+    text-align: center;
+    background-color: gray;
+}
+
+tr{
+    width: 20px;
+    height: 20px;
+    border-color: black;
+    border-style: solid;
+    border: 1px;
+    background-color: white;
+}
+
+td{
+    width: 20px;
+    height: 20px;
+    border-color: black;
+    border-style: solid;
+    background-color: white;
+}
