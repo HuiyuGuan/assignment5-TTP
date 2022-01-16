@@ -68,9 +68,7 @@ function clearColor(){
     }
 }
 
-function setCellColor(event){
-    let color = document.getElementById("color").value
-    event.addEventListener("click", function(){
-        event.style.backgroundColor = color
-    })
-}
+let color = document.getElementById("color")
+    cell.onclick = function(event){
+        event.target.style.backgroundColor = color.value
+    }
