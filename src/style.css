@@ -19,3 +19,7 @@ td{
     border-style: solid;
     background-color: white;
 }
+
+table.cell{
+    background-color: white;
+}

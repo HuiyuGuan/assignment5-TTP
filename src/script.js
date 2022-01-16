@@ -41,22 +41,22 @@ function removeColumns(){
     width--
 }
 function fillUncolored(){
-    let color = document.getElementById("color").value
+    let color = document.getElementById("color")
     let column = document.getElementsByClassName("column")
     let td = Array.from(column)
     for(let t of td){
         if(t.style.backgroundColor =="white"){
-            t.style.backgroundColor = color
+            t.style.backgroundColor = color.value
         }
     }
 }
 
 function fillAll(){
-    let color = document.getElementById("color").value
+    let color = document.getElementById("color")
     let column = document.getElementsByClassName("column")
     let td = Array.from(column)
     for(let t of td){
-            t.style.backgroundColor = color
+            t.style.backgroundColor = color.value
     }
 }
 
@@ -68,7 +68,19 @@ function clearColor(){
     }
 }
 
+let colored = false
 let color = document.getElementById("color")
     cell.onclick = function(event){
         event.target.style.backgroundColor = color.value
+    }
+    cell.onmousedown = function(){
+        colored = true
+    }
+    cell.onmouseup = function(){
+        colored = false
+    }
+    cell.onmousemove = function(event){
+        if(colored){
+            event.target.style.backgroundColor = color.value 
+        }
     }
